@@ -44,6 +44,7 @@ class Gui(ctk.CTk):
     Methods:
         __init__(): Initializes the Gui object, sets up the main window, loads images, and creates frames.
         load_images(): Loads images used in the GUI from specified directories.
+        load_fonts(): Loads fonts used in the GUI from specified directories.
         create_menu_frame(): Creates and configures the menu frame where users can select solutions and exit.
         create_main_frame(): Creates and configures the main frame where application details are displayed.
         create_title_frame(): Creates and configures the title frame where solution name is displayed.
@@ -96,21 +97,16 @@ class Gui(ctk.CTk):
 
         # Define paths to various resource directories
         self.images_path = os.path.join(base_path, "images")
-        ctk.FontManager.load_font(os.path.join(base_path, "fonts\Fascinate-Regular.ttf"))
-        ctk.FontManager.load_font(os.path.join(base_path, "fonts\BRITANIC.ttf"))
-        ctk.FontManager.load_font(os.path.join(base_path, "fonts\CaesarDressing-Regular.ttf"))
-        ctk.FontManager.load_font(os.path.join(base_path, "fonts\Rubik-Italic-VariableFont_wght.ttf"))
-        ctk.FontManager.load_font(os.path.join(base_path, "fonts\Rubik-VariableFont_wght.ttf"))
-        ctk.FontManager.load_font(os.path.join(base_path, "fonts\Silkscreen-Bold.ttf"))
-        ctk.FontManager.load_font(os.path.join(base_path, "fonts\Silkscreen-Regular.ttf"))
+        self.fonts_path = os.path.join(base_path, "fonts")
 
         # Dictionaries of solution icons, buttons, and rps images
         self.icons = {}
         self.menu_buttons = {}
         self.rps_images = {}
 
-        # Load images
+        # Load images and fonts
         self.load_images()
+        self.load_fonts()
 
         # Create and show frames
         self.create_menu_frame()
@@ -119,7 +115,18 @@ class Gui(ctk.CTk):
         self.create_rps_frame()
         self.create_mt_frame()
         self.create_cc_frame()
-        
+       
+    def load_fonts(self):
+        """Loads fonts used in the GUI from specified directories.
+        """
+        ctk.FontManager.load_font(os.path.join(self.fonts_path, "Fascinate-Regular.ttf"))
+        ctk.FontManager.load_font(os.path.join(self.fonts_path, "BRITANIC.ttf"))
+        ctk.FontManager.load_font(os.path.join(self.fonts_path, "CaesarDressing-Regular.ttf"))
+        ctk.FontManager.load_font(os.path.join(self.fonts_path, "Rubik-Italic-VariableFont_wght.ttf"))
+        ctk.FontManager.load_font(os.path.join(self.fonts_path, "Rubik-VariableFont_wght.ttf"))
+        ctk.FontManager.load_font(os.path.join(self.fonts_path, "Silkscreen-Bold.ttf"))
+        ctk.FontManager.load_font(os.path.join(self.fonts_path, "Silkscreen-Regular.ttf"))
+     
     def load_images(self):
         """Loads images used in the GUI from specified directories.
         """
