@@ -1,5 +1,5 @@
 # midtownapp
-Project: MidTown IT Training Solutions App
+```Project: MidTown IT Training Solutions App
 Description: Provides a gui hub to switch between three algorithmic solutions:
                 - Rock Paper Scissors
                 - Multiplication Table
