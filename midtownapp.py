@@ -19,7 +19,7 @@ darkdetect==0.8.0
 packaging==23.2
 Pillow==10.1.0
 
-GitHub Repository: --
+GitHub Repository: https://github.com/LukeWait/midtown_it-training_app
 """
 
 import os
@@ -96,6 +96,13 @@ class Gui(ctk.CTk):
 
         # Define paths to various resource directories
         self.images_path = os.path.join(base_path, "images")
+        ctk.FontManager.load_font(os.path.join(base_path, "fonts\Fascinate-Regular.ttf"))
+        ctk.FontManager.load_font(os.path.join(base_path, "fonts\BRITANIC.ttf"))
+        ctk.FontManager.load_font(os.path.join(base_path, "fonts\CaesarDressing-Regular.ttf"))
+        ctk.FontManager.load_font(os.path.join(base_path, "fonts\Rubik-Italic-VariableFont_wght.ttf"))
+        ctk.FontManager.load_font(os.path.join(base_path, "fonts\Rubik-VariableFont_wght.ttf"))
+        ctk.FontManager.load_font(os.path.join(base_path, "fonts\Silkscreen-Bold.ttf"))
+        ctk.FontManager.load_font(os.path.join(base_path, "fonts\Silkscreen-Regular.ttf"))
 
         # Dictionaries of solution icons, buttons, and rps images
         self.icons = {}
@@ -659,19 +666,18 @@ class Gui(ctk.CTk):
                 self.rps_segbutton_p2.set("deselect")
                 self.rps_segbutton_p2.configure(state="disabled")
         
-    def update_mt_textbox(self, text, user):
+    def update_mt_textbox(self, text):
         """Updates the textbox of the Multiplication Table screen.
 
         Args:
             text (str): The text to be displayed.
-            user (str): The username of the Multiplication Table solution.
         """
         # Enable textbox and clear out contents
         self.mt_textbox.configure(state="normal")
         self.mt_textbox.delete("0.0", END)
         # If text is provided, insert into textbox
         if text:
-            self.mt_textbox.insert(END, f"{user}'s Table:\n\n{text}")
+            self.mt_textbox.insert(END, text)
         self.mt_textbox.configure(state="disabled")
     
     def update_cc_textbox(self, text, output):
@@ -741,14 +747,23 @@ class RockPaperScissors:
         self.p1name = self.gui.rps_entry_p1name.get()
         self.p2name = self.gui.rps_entry_p2name.get()
         
+        # Store invalid fields for accurate error message
+        invalid_fields = []
+        if not self.p1name:
+            invalid_fields.append("Player 1 empty")
+        if not self.p2name:
+            invalid_fields.append("Player 2 empty")
+        
         # Validate entry fields and switch to game screen
-        if self.p1name and self.p2name:
+        if invalid_fields:
+            error_message = " & ".join(invalid_fields)
+            self.gui.update_msg(f"Input Error: Please ensure all fields have correct input\n"
+                                f"Fields: {error_message}", 
+                                "rps_login", "error")
+        else:
             self.gui.update_rps_name("p1", self.p1name)
             self.gui.update_rps_name("p2", self.p2name)
             self.gui.switch_rps_frame("game")
-        else:
-            self.gui.update_msg("Please enter a name for P1 and P2\nAnything will do!", 
-                                    "rps_login", "error")
 
     def replay(self):
         """Starts a new round of Rock Paper Scissors.
@@ -865,25 +880,36 @@ class MultiplicationTable:
         
         text = ""
         
+        # Store invalid fields for accurate error message
+        invalid_fields = []
+        if not self.username:
+            invalid_fields.append("Username empty")
+        if not self.multiplier:
+            invalid_fields.append("Multiplier empty")
+        elif not self.is_number(self.multiplier):
+            invalid_fields.append("Multiplier not an integer")
+        
         # Validate user input and update output fields
-        if self.username and self.is_number(self.multiplier):
+        if invalid_fields:
+            error_message = " & ".join(invalid_fields)
+            self.gui.update_msg(f"Input Error: Please ensure all fields have correct input\n"
+                                f"Fields: {error_message}", 
+                                "mt", "error")
+        else:
             self.multiplier = int(self.multiplier)
-            
+                
             # Generate the multiplication table for every multiplicand in the chosen range
+            text += f"{self.username}'s Table:\n\n"
             for multiplicand in range(1, self.multiplicand + 1):
                 product = multiplicand * self.multiplier
                 text += f"{multiplicand} x {self.multiplier} = {product}\n"
                 
             # Display the success msg
             self.gui.update_msg("Multiplication Table has been generated\n" +
-                                   "Thank you for choosing MidTown IT", "mt", "system")
-        else:
-            # Display error msg
-            self.gui.update_msg("Input error: please ensure all fields have input\n" +
-                                   "Multiplier must be an integer", "mt", "error")
-        
+                                "Thank you for choosing MidTown IT", "mt", "system")
+            
         # Display generated table, or clear out textbox if invalid input   
-        self.gui.update_mt_textbox(text, self.username)
+        self.gui.update_mt_textbox(text)
      
     def is_number(self, value):
         """Checks if a variable is an integer.
@@ -939,19 +965,30 @@ class CaesarCipher:
               
         self.ciphertext = ""      
               
-        # Validate user input and update output fields       
-        if self.cipherkey and self.plaintext:
+        # Store invalid fields for accurate error message
+        invalid_fields = []
+        if not self.cipherkey:
+            invalid_fields.append("Cipher key empty")
+        if not self.plaintext:
+            invalid_fields.append("Plaintext empty")
+        
+        # Validate user input and update output fields
+        if invalid_fields:
+            error_message = " & ".join(invalid_fields)
+            self.gui.update_msg(f"Input Error: Please ensure all fields have correct input\n"
+                                f"Fields: {error_message}", 
+                                "cc", "error")
+        else:    
+            # Encrypt the plaintext into cyphertext
             self.ciphertext = self.caesar_cipher(self.plaintext, "encrypt")
             
+            # Display the success msg / result of using a multiple of 26 as a key
             if self.cipherkey % 26 == 0:
                 self.gui.update_msg("Using a cipher key divisible by 26 results in no change!\n" +
-                                    "Plaintext and Ciphertext will be identical", "cc", "error")
+                                    "Alpha characters remain unchanged", "cc", "error")
             else:
                 self.gui.update_msg("Plaintext has been encrypted with the cipher key\n" +
                                     "Thank you for choosing MidTown IT", "cc", "system")
-        else:
-            self.gui.update_msg("Input error: please ensure all fields have input\n" +
-                                "Text required in plaintext field", "cc", "error")
         
         # Display generated ciphertext, or clear out output textbox if invalid input 
         self.gui.update_cc_textbox(self.ciphertext, "ctext")
@@ -967,19 +1004,30 @@ class CaesarCipher:
         
         self.plaintext = ""
         
-        # Validate user input and update output fields        
-        if self.cipherkey and self.ciphertext:
+        # Store invalid fields for accurate error message
+        invalid_fields = []
+        if not self.cipherkey:
+            invalid_fields.append("Cipher key empty")
+        if not self.ciphertext:
+            invalid_fields.append("Ciphertext empty")
+        
+        # Validate user input and update output fields
+        if invalid_fields:
+            error_message = " & ".join(invalid_fields)
+            self.gui.update_msg(f"Input Error: Please ensure all fields have correct input\n"
+                                f"Fields: {error_message}", 
+                                "cc", "error")
+        else:
+            # Decrypt the cyphertext into plaintext
             self.plaintext = self.caesar_cipher(self.ciphertext, "decrypt")
             
+            # Display the success msg / result of using a multiple of 26 as a key
             if self.cipherkey % 26 == 0:
                 self.gui.update_msg("Using a cipher key divisible by 26 results in no change!\n" +
-                                    "Plaintext and Ciphertext will be identical", "cc", "error")
+                                    "Alpha characters remain unchanged", "cc", "error")
             else:
                 self.gui.update_msg("Ciphertext has been decrypted with the cipher key\n" +
                                     "Thank you for choosing MidTown IT", "cc", "system")
-        else:
-            self.gui.update_msg("Input error: please ensure all fields have input\n" +
-                                "Text required in plaintext field", "cc", "error")
             
         # Display generated ciphertext, or clear out output textbox if invalid input 
         self.gui.update_cc_textbox(self.plaintext, "ptext")
