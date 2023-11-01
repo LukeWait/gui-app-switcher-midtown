@@ -12,12 +12,13 @@ Date: October 30, 2023
 License: MIT License
 
 Dependencies (requirements.txt):
-CTkMessagebox==2.5
 CTkToolTip==0.8
 customtkinter==5.2.1
 darkdetect==0.8.0
 packaging==23.2
 Pillow==10.1.0
+
+Icons: Designed by Freepik - www.freepik.com
 
 GitHub Repository: https://github.com/LukeWait/midtown_it-training_app
 """
@@ -26,7 +27,6 @@ import os
 import pkg_resources
 import customtkinter as ctk
 from tkinter import *
-from CTkMessagebox import *
 from CTkToolTip import *
 from PIL import Image
 
@@ -119,13 +119,17 @@ class Gui(ctk.CTk):
     def load_fonts(self):
         """Loads fonts used in the GUI from specified directories.
         """
-        ctk.FontManager.load_font(os.path.join(self.fonts_path, "Fascinate-Regular.ttf"))
-        ctk.FontManager.load_font(os.path.join(self.fonts_path, "BRITANIC.ttf"))
-        ctk.FontManager.load_font(os.path.join(self.fonts_path, "CaesarDressing-Regular.ttf"))
-        ctk.FontManager.load_font(os.path.join(self.fonts_path, "Rubik-Italic-VariableFont_wght.ttf"))
-        ctk.FontManager.load_font(os.path.join(self.fonts_path, "Rubik-VariableFont_wght.ttf"))
-        ctk.FontManager.load_font(os.path.join(self.fonts_path, "Silkscreen-Bold.ttf"))
-        ctk.FontManager.load_font(os.path.join(self.fonts_path, "Silkscreen-Regular.ttf"))
+        try:
+            ctk.FontManager.load_font(os.path.join(self.fonts_path, "Fascinate-Regular.ttf"))
+            ctk.FontManager.load_font(os.path.join(self.fonts_path, "BRITANIC.ttf"))
+            ctk.FontManager.load_font(os.path.join(self.fonts_path, "CaesarDressing-Regular.ttf"))
+            ctk.FontManager.load_font(os.path.join(self.fonts_path, "Rubik-Italic-VariableFont_wght.ttf"))
+            ctk.FontManager.load_font(os.path.join(self.fonts_path, "Rubik-VariableFont_wght.ttf"))
+            ctk.FontManager.load_font(os.path.join(self.fonts_path, "Silkscreen-Bold.ttf"))
+            ctk.FontManager.load_font(os.path.join(self.fonts_path, "Silkscreen-Regular.ttf"))
+            
+        except Exception as e:
+            print(f"Error:\n{str(e)}")
      
     def load_images(self):
         """Loads images used in the GUI from specified directories.
@@ -165,16 +169,8 @@ class Gui(ctk.CTk):
             self.image_blank = ctk.CTkImage(Image.open(os.path.join(self.images_path, "blank.png")), 
                                             size=(180, 180))
 
-            # CTkMessagebox icons
-            self.icon_info = os.path.join(self.images_path, "info.png")
-            self.icon_cancel = os.path.join(self.images_path, "cancel.png")
-            self.icon_check = os.path.join(self.images_path, "check.png")
-            self.icon_question = os.path.join(self.images_path, "question.png")
-            self.icon_warning = os.path.join(self.images_path, "warning.png")
-
         except Exception as e:
-            CTkMessagebox(title="Error Loading Images", message=f"Error:\n{str(e)}", 
-                          icon=self.icon_cancel, master=self)
+            print(f"Error:\n{str(e)}")
     
     def create_menu_frame(self):
         """Creates and configures the menu frame.
@@ -1017,6 +1013,8 @@ class CaesarCipher:
             invalid_fields.append("Cipher key empty")
         if not self.ciphertext:
             invalid_fields.append("Ciphertext empty")
+        if not self.ciphertext.isalpha():
+            invalid_fields.append("Ciphertext contains non-alpha")
         
         # Validate user input and update output fields
         if invalid_fields:
@@ -1043,6 +1041,7 @@ class CaesarCipher:
         """Uses a cipher key to encrypt and decrypt plaintext and ciphertext.
         
         Converts only letters using ASCII values and modulus.
+        Removes all non-alpha characters and replaces "." with "X"
         
         Args:
             text (str): The text to be encrypted/decrypted..
@@ -1056,8 +1055,11 @@ class CaesarCipher:
         self.cipherkey = self.validate_key(self.cipherkey)
         
         for char in text.upper():
-            # Only encrypt/decrypt letters, keeping non-letter characters unchanged
-            if char.isalpha():
+            # Only encrypt/decrypt letters and full stop, removing non-alpha characters
+            if char.isalpha() or char ==".":
+                # Change full stop to "X"
+                if char == ".":
+                    char = "X"
                 # Gets ASCII value of "A" to use as baseline
                 base = ord("A")
                 # Substracts base from char and adds the cipherkey, giving alpha<->numeric representation
@@ -1065,13 +1067,11 @@ class CaesarCipher:
                 # Adding the base aligns alpha<->numeric representation (1-26) with ASCII values of A-Z
                 if dir == "encrypt":
                     modified_char = chr(((ord(char) - base + self.cipherkey) % 26) + base)
-                elif dir =="decrypt":
+                elif dir == "decrypt":
                     modified_char = chr(((ord(char) - base - self.cipherkey) % 26) + base)  
                 
                 result += modified_char
-            else:
-                result += char
-        
+                
         return result
     
     def validate_key(self, key):
