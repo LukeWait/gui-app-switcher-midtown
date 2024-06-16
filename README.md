@@ -38,11 +38,11 @@ To install and run the project from source, follow these steps:
 
 4. Run the application:
     ```sh
-    python main.py
+    python midtownapp.py
     ```
 
 ## Usage
-After running the `main.py` file, you can easily switch between the following applets:
+After running the `midtownapp.py` file, you can easily switch between the following applets:
 - **Rock Paper Scissors**: Play a classic game against another player.
 - **Multiplication Table**: Generate and view multiplication tables.
 - **Caesar Cipher**: Encrypt and decrypt text using the Caesar Cipher algorithm.
