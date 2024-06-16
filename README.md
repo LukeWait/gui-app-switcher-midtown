@@ -6,7 +6,6 @@ Description: Provides a gui hub to switch between three algorithmic solutions:
                 - Caesar Cipher
 Version: 2.0
 Author: Luke Wait
-Email: lukewait@outlook.com
 Date: November 01, 2023
 License: MIT License
 
