@@ -65,4 +65,4 @@ For those building from source, the dependencies listed in `requirements.txt` ar
 - Pillow==10.1.0
 
 ## User Manual
-For detailed instructions on installation, setup, and usage, please refer to the [User Manual]([link_to_user_manual.pdf](https://github.com/LukeWait/gui-app-switcher-midtownapp/blob/main/midtownapp_user_manual.pdf)).
+For detailed instructions on installation, setup, and usage, please refer to the [User Manual](https://github.com/LukeWait/gui-app-switcher-midtownapp/blob/main/midtownapp_user_manual.pdf).
