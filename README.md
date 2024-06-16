@@ -8,8 +8,9 @@ The MidTown IT Training Solutions App provides a GUI hub to switch between three
 - Multiplication Table
 - Caesar Cipher
 
-<img src="screenshots/midtownapp-home.png" alt="App Screenshot" width="600">
-![App Screenshot](screenshots/midtownapp-home.png)
+<div style="text-align: center;">
+  <img src="screenshots/midtownapp-home.png" alt="App Screenshot" width="600">
+</div>
 
 ## Table of Contents
 - [Installation](#installation)
