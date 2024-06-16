@@ -19,8 +19,8 @@ To install and run the project from source, follow these steps:
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/LukeWait/midtown_it-training_app.git
-    cd midtown_it-training_app
+    git clone https://github.com/LukeWait/gui-app-switcher-midtownapp.git
+    cd gui-app-switcher-midtownapp
     ```
 
 2. (Optional) Create and activate a virtual environment:
@@ -52,7 +52,7 @@ This project is licensed under the MIT License. See the LICENSE file for details
 Icons used in the app are designed by Freepik - [www.freepik.com](https://www.freepik.com).
 
 ## Source Code
-The source code for this project can be found in the GitHub repository: [https://github.com/LukeWait/midtown_it-training_app](https://www.github.com/LukeWait/midtown_it-training_app).
+The source code for this project can be found in the GitHub repository: [https://github.com/LukeWait/gui-app-switcher-midtownapp](https://www.github.com/LukeWait/gui-app-switcher-midtownapp).
 
 ## Dependencies
 For those building from source, the dependencies listed in `requirements.txt` are:
