@@ -9,7 +9,7 @@ The MidTown IT Training Solutions App provides a GUI hub to switch between three
 - Caesar Cipher
 
 <p align="center">
-  <img src="screenshots/midtownapp-home.png" alt="App Screenshot" width="600">
+  <img src="assets/screenshots/midtownapp-home.png" alt="App Screenshot" width="600">
 </p>
 
 ## Table of Contents
@@ -50,19 +50,19 @@ After running the `midtownapp.py` file, you can easily switch between the follow
 - **Rock Paper Scissors**: Play a classic game against another player.
   
 <p align="center">
-  <img src="screenshots/midtownapp-rock_paper_scissors.png" alt="App Screenshot" width="600">
+  <img src="assets/screenshots/midtownapp-rock_paper_scissors.png" alt="App Screenshot" width="600">
 </p>
 
 - **Multiplication Table**: Generate and view multiplication tables.
 
 <p align="center">
-  <img src="screenshots/midtownapp-multiplication_table.png" alt="App Screenshot" width="600">
+  <img src="assets/screenshots/midtownapp-multiplication_table.png" alt="App Screenshot" width="600">
 </p>
 
 - **Caesar Cipher**: Encrypt and decrypt text using the Caesar Cipher algorithm.
 
 <p align="center">
-  <img src="screenshots/midtownapp-caesar_cipher.png" alt="App Screenshot" width="600">
+  <img src="assets/screenshots/midtownapp-caesar_cipher.png" alt="App Screenshot" width="600">
 </p>
 
 ## License
