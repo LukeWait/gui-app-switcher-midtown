@@ -48,8 +48,22 @@ To install and run the project from source, follow these steps:
 ## Usage
 After running the `midtownapp.py` file, you can easily switch between the following applets:
 - **Rock Paper Scissors**: Play a classic game against another player.
+  
+<p align="center">
+  <img src="screenshots/midtownapp-rock_paper_scissors.png" alt="App Screenshot" width="600">
+</p>
+
 - **Multiplication Table**: Generate and view multiplication tables.
+
+<p align="center">
+  <img src="screenshots/midtownapp-multiplication_table.png" alt="App Screenshot" width="600">
+</p>
+
 - **Caesar Cipher**: Encrypt and decrypt text using the Caesar Cipher algorithm.
+
+<p align="center">
+  <img src="screenshots/midtownapp-caesar_cipher.png" alt="App Screenshot" width="600">
+</p>
 
 ## License
 This project is licensed under the MIT License. See the LICENSE file for details.
