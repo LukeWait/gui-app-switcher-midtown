@@ -1,6 +1,7 @@
 # MidTown IT Training Solutions App
 
 ## Description
+This project was developed as part of an assignment at TAFE Queensland - ICTPRG434-435.
 The MidTown IT Training Solutions App provides a GUI hub to switch between three algorithmic solutions:
 - Rock Paper Scissors
 - Multiplication Table
