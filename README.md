@@ -9,7 +9,7 @@ The MidTown IT Training Solutions App provides a GUI hub to switch between three
 - Caesar Cipher
 
 <p align="center">
-  <img src="screenshots/midtownapp-home.png" alt="App Screenshot" width="600">
+  <img src="screenshots/midtownapp-home.png" alt="App Screenshot" width="600" style="padding: 10px; border: 2px solid #4a4a4a; background-color: white;">
 </p>
 
 ## Table of Contents
