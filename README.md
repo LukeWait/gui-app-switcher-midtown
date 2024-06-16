@@ -1,21 +1,63 @@
-# midtownapp
-```Project: MidTown IT Training Solutions App
-Description: Provides a gui hub to switch between three algorithmic solutions:
-                - Rock Paper Scissors
-                - Multiplication Table
-                - Caesar Cipher
-Version: 2.0
-Author: Luke Wait
-Date: November 01, 2023
-License: MIT License
+# MidTown IT Training Solutions App
 
-Dependencies (requirements.txt):
-CTkToolTip==0.8
-customtkinter==5.2.1
-darkdetect==0.8.0
-packaging==23.2
-Pillow==10.1.0
+## Description
+The MidTown IT Training Solutions App provides a GUI hub to switch between three algorithmic solutions:
+- Rock Paper Scissors
+- Multiplication Table
+- Caesar Cipher
 
-Icons: Designed by Freepik - www.freepik.com
+## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Acknowledgments](#acknowledgments)
+- [Source Code](#source-code)
+- [Dependencies](#dependencies)
 
-GitHub Repository: https://github.com/LukeWait/midtown_it-training_app
+## Installation
+To install and run the project from source, follow these steps:
+
+1. Clone the repository:
+    ```sh
+    git clone https://github.com/LukeWait/midtown_it-training_app.git
+    cd midtown_it-training_app
+    ```
+
+2. (Optional) Create and activate a virtual environment:
+    ```sh
+    python -m venv midtownapp-venv
+    source midtownapp-venv/bin/activate  # On Windows, use `midtownapp-venv\\Scripts\\activate`
+    ```
+
+3. Install the dependencies:
+    ```sh
+    pip install -r requirements.txt
+    ```
+
+4. Run the application:
+    ```sh
+    python main.py
+    ```
+
+## Usage
+After running the `main.py` file, you can easily switch between the following applets:
+- **Rock Paper Scissors**: Play a classic game against the computer.
+- **Multiplication Table**: Generate and view multiplication tables.
+- **Caesar Cipher**: Encrypt and decrypt text using the Caesar Cipher algorithm.
+
+## License
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+## Acknowledgments
+Icons used in the app are designed by Freepik - [www.freepik.com](https://www.freepik.com).
+
+## Source Code
+The source code for this project can be found in the GitHub repository: [https://github.com/LukeWait/midtown_it-training_app](https://www.github.com/LukeWait/midtown_it-training_app).
+
+## Dependencies
+For those building from source, the dependencies listed in `requirements.txt` are:
+- CTkToolTip==0.8
+- customtkinter==5.2.1
+- darkdetect==0.8.0
+- packaging==23.2
+- Pillow==10.1.0
