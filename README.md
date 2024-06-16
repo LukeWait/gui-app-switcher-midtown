@@ -19,6 +19,7 @@ The MidTown IT Training Solutions App provides a GUI hub to switch between three
 - [Acknowledgments](#acknowledgments)
 - [Source Code](#source-code)
 - [Dependencies](#dependencies)
+- [User Manual](#user-manual)
 
 ## Installation
 To install and run the project from source, follow these steps:
