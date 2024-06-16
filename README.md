@@ -41,7 +41,7 @@ To install and run the project from source, follow these steps:
 
 ## Usage
 After running the `main.py` file, you can easily switch between the following applets:
-- **Rock Paper Scissors**: Play a classic game against the computer.
+- **Rock Paper Scissors**: Play a classic game against another player.
 - **Multiplication Table**: Generate and view multiplication tables.
 - **Caesar Cipher**: Encrypt and decrypt text using the Caesar Cipher algorithm.
 
