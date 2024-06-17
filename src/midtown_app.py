@@ -95,8 +95,8 @@ class Gui(ctk.CTk):
         self.grid_columnconfigure(1, weight=1)
 
         # Define paths to various resource directories
-        self.images_path = os.path.join(base_path, "..", "assets", "images")
-        self.fonts_path = os.path.join(base_path, "..", "assets", "fonts")
+        self.images_path = os.path.join(base_path, "..", "assets/images")
+        self.fonts_path = os.path.join(base_path, "..", "assets/fonts")
 
         # Dictionaries of solution icons, buttons, and rps images
         self.icons = {}
