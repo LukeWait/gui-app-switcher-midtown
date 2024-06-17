@@ -5,7 +5,7 @@ Description: Provides a gui hub to switch between three algorithmic solutions:
                 - Rock Paper Scissors
                 - Multiplication Table
                 - Caesar Cipher
-Version: 2.0
+Version: 2.0.1
 Author: Luke Wait
 Date: October 30, 2023
 License: MIT License
@@ -19,7 +19,7 @@ Pillow==10.1.0
 
 Icons: Designed by Freepik - www.freepik.com
 
-GitHub Repository: https://github.com/LukeWait/midtown_it-training_app
+GitHub Repository: https://github.com/LukeWait/gui-app-switcher-midtownapp
 """
 
 import os
