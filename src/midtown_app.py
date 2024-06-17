@@ -19,7 +19,7 @@ Pillow==10.1.0
 
 Icons: Designed by Freepik - www.freepik.com
 
-GitHub Repository: https://github.com/LukeWait/gui-app-switcher-midtownapp
+GitHub Repository: https://github.com/LukeWait/gui-app-switcher-midtown
 """
 
 import os
@@ -136,9 +136,9 @@ class Gui(ctk.CTk):
         try:
             # Define the solution names and their corresponding file names
             solutions = {
-                "Rock Paper Scissors": "rock_paper_scissors.png",
-                "Multiplication Table": "multiply_table.png",
-                "Caesar Cipher": "caesar_coin.png"
+                "Rock Paper Scissors": "rock-paper-scissors.png",
+                "Multiplication Table": "multiply-table.png",
+                "Caesar Cipher": "caesar-coin.png"
             }
             
             # Define the icon sizes you need
