@@ -42,7 +42,7 @@ To install and run the application from source:
     - **Windows**:
       ```sh
       python -m venv midtown_app_venv
-      source midtown_app_venv\Scripts\activate
+      midtown_app_venv\Scripts\activate
       ```
     - **Linux**:
       ```sh
