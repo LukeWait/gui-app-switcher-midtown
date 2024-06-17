@@ -54,7 +54,7 @@ After running the `midtown_app.py` file, you can easily switch between the follo
 - **Multiplication Table**: Generate and view multiplication tables.
 
 <p align="center">
-  <img src="assets/screenshots/midtown-app-multiply_table.png" alt="App Screenshot" width="600">
+  <img src="assets/screenshots/midtown-app-multiply-table.png" alt="App Screenshot" width="600">
 </p>
 
 - **Caesar Cipher**: Encrypt and decrypt text using the Caesar Cipher algorithm.
