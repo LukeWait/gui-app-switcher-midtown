@@ -1,8 +1,6 @@
 # MidTown IT Training Solutions App
 
 ## Description
-This project was developed as part of an assignment at TAFE Queensland for subject ICTPRG434-435.
-
 The MidTown IT Training Solutions App provides a GUI hub to switch between three algorithmic solutions:
 - Rock Paper Scissors
 - Multiplication Table
@@ -19,21 +17,20 @@ The MidTown IT Training Solutions App provides a GUI hub to switch between three
 - [Acknowledgments](#acknowledgments)
 - [Source Code](#source-code)
 - [Dependencies](#dependencies)
-- [User Manual](#user-manual)
 
 ## Installation
 To install and run the project from source, follow these steps:
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/LukeWait/gui-app-switcher-midtownapp.git
-    cd gui-app-switcher-midtownapp
+    git clone https://github.com/LukeWait/gui-app-switcher-midtown.git
+    cd gui-app-switcher-midtown
     ```
 
 2. (Optional) Create and activate a virtual environment:
     ```sh
-    python -m venv midtownapp-venv
-    source midtownapp-venv/bin/activate  # On Windows, use `midtownapp-venv\\Scripts\\activate`
+    python -m venv midtown_app_venv
+    source midtown_app_venv/bin/activate  # On Windows, use `midtown_app_venv\\Scripts\\activate`
     ```
 
 3. Install the dependencies:
@@ -43,11 +40,11 @@ To install and run the project from source, follow these steps:
 
 4. Run the application:
     ```sh
-    python midtownapp.py
+    python src/midtown_app.py
     ```
 
 ## Usage
-After running the `midtownapp.py` file, you can easily switch between the following applets:
+After running the `midtown_app.py` file, you can easily switch between the following applets:
 - **Rock Paper Scissors**: Play a classic game against another player.
   
 <p align="center">
@@ -70,10 +67,14 @@ After running the `midtownapp.py` file, you can easily switch between the follow
 This project is licensed under the MIT License. See the LICENSE file for details.
 
 ## Acknowledgments
+This project was developed as part of an assignment at TAFE Queensland for subject ICTPRG434-435.
+
 Icons used in the app are designed by Freepik - [www.freepik.com](https://www.freepik.com).
 
+Fonts used in the app are open source Google Fonts.
+
 ## Source Code
-The source code for this project can be found in the GitHub repository: [https://github.com/LukeWait/gui-app-switcher-midtownapp](https://www.github.com/LukeWait/gui-app-switcher-midtownapp).
+The source code for this project can be found in the GitHub repository: [https://github.com/LukeWait/gui-app-switcher-midtown](https://www.github.com/LukeWait/gui-app-switcher-midtown).
 
 ## Dependencies
 For those building from source, the dependencies listed in `requirements.txt` are:
@@ -82,6 +83,3 @@ For those building from source, the dependencies listed in `requirements.txt` ar
 - darkdetect==0.8.0
 - packaging==23.2
 - Pillow==10.1.0
-
-## User Manual
-For detailed instructions on installation, setup, and usage, please refer to the [User Manual](https://github.com/LukeWait/gui-app-switcher-midtownapp/blob/main/docs/midtownapp_user_manual.pdf).
