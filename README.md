@@ -7,7 +7,7 @@ The MidTown IT Training Solutions App provides a GUI hub to switch between three
 - Caesar Cipher
 
 <p align="center">
-  <img src="https://github.com/LukeWait/gui-app-switcher-midtown/raw/main/assets/screenshots/midtown-app-home.png" alt="App Screenshot" width="600">
+  <img src="https://github.com/LukeWait/midtown-app/raw/main/assets/screenshots/midtown-app-home.png" alt="App Screenshot" width="600">
 </p>
 
 ## Table of Contents
@@ -22,20 +22,20 @@ The MidTown IT Training Solutions App provides a GUI hub to switch between three
 
 ### Executable
 #### Windows
-1. Download the `midtown_app_windows_v2_0_1.zip` from the [releases page](https://github.com/LukeWait/gui-app-switcher-midtown/releases).
+1. Download the `midtown_app_win_v2_0_1.zip` from the [releases page](https://github.com/LukeWait/midtown-app/releases).
 2. Extract the contents to a desired location.
 3. Run the `MidTownApp.exe` file.
 
 #### Linux
-Due to size constraints, the Linux executable is not included in the releases. Please follow the instructions below to run the application from source.
+Due to size constraints, a Linux executable is not included in the releases. Please follow the instructions below to run the application from source.
 
 ### From Source
 To install and run the application from source:
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/LukeWait/gui-app-switcher-midtown.git
-    cd gui-app-switcher-midtown
+    git clone https://github.com/LukeWait/midtown-app.git
+    cd midtown-app
     ```
 
 2. (Optional) Create and activate a virtual environment:
@@ -70,19 +70,19 @@ After running the application, you can easily switch between the following apple
 - **Rock Paper Scissors**: Play a classic game against another player.
 
 <p align="center">
-  <img src="https://github.com/LukeWait/gui-app-switcher-midtown/raw/main/assets/screenshots/midtown-app-rps.png" alt="Rock Paper Scissors Screenshot" width="600">
+  <img src="https://github.com/LukeWait/midtown-app/raw/main/assets/screenshots/midtown-app-rps.png" alt="Rock Paper Scissors Screenshot" width="600">
 </p>
 
 - **Multiplication Table**: Generate and view multiplication tables.
 
 <p align="center">
-  <img src="https://github.com/LukeWait/gui-app-switcher-midtown/raw/main/assets/screenshots/midtown-app-multiply-table.png" alt="Multiplication Table Screenshot" width="600">
+  <img src="https://github.com/LukeWait/midtown-app/raw/main/assets/screenshots/midtown-app-multiply-table.png" alt="Multiplication Table Screenshot" width="600">
 </p>
 
 - **Caesar Cipher**: Encrypt and decrypt text using the Caesar Cipher algorithm.
 
 <p align="center">
-  <img src="https://github.com/LukeWait/gui-app-switcher-midtown/raw/main/assets/screenshots/midtown-app-caesar.png" alt="Caesar Cipher Screenshot" width="600">
+  <img src="https://github.com/LukeWait/midtown-app/raw/main/assets/screenshots/midtown-app-caesar.png" alt="Caesar Cipher Screenshot" width="600">
 </p>
 
 ## License
@@ -96,7 +96,7 @@ Icons used in the app are designed by Freepik - [www.freepik.com](https://www.fr
 Fonts used in the app are open source Google Fonts.
 
 ## Source Code
-The source code for this project can be found in the GitHub repository: [https://github.com/LukeWait/gui-app-switcher-midtown](https://www.github.com/LukeWait/gui-app-switcher-midtown).
+The source code for this project can be found in the GitHub repository: [https://github.com/LukeWait/midtown-app](https://www.github.com/LukeWait/midtown-app).
 
 ## Dependencies
 For those building from source, the dependencies listed in `requirements.txt` are:
