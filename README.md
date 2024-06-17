@@ -21,12 +21,12 @@ The MidTown IT Training Solutions App provides a GUI hub to switch between three
 ## Installation
 
 ### Executable
-### Windows
+#### Windows
 1. Download the `midtown_app_windows_v2_0_1.zip` from the [releases page](https://github.com/LukeWait/gui-app-switcher-midtown/releases).
 2. Extract the contents to a desired location.
 3. Run the `MidTownApp.exe` file.
 
-### Linux
+#### Linux
 Due to size constraints, the Linux executable is not included in the releases. Please follow the instructions below to run the application from source.
 
 ### From Source
