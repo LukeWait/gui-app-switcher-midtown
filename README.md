@@ -7,7 +7,7 @@ The MidTown IT Training Solutions App provides a GUI hub to switch between three
 - Caesar Cipher
 
 <p align="center">
-  <img src="assets/screenshots/midtown-app-home.png" alt="App Screenshot" width="600">
+  <img src="https://github.com/LukeWait/gui-app-switcher-midtown/raw/main/assets/screenshots/midtown-app-home.png" alt="App Screenshot" width="600">
 </p>
 
 ## Table of Contents
@@ -19,7 +19,29 @@ The MidTown IT Training Solutions App provides a GUI hub to switch between three
 - [Dependencies](#dependencies)
 
 ## Installation
-To install and run the project from source, follow these steps:
+
+### Executable
+To install and run the application using the executable:
+
+1. Download and extract the release ZIP file.
+
+2. **(Linux only)** Make the executable file runnable:
+    ```sh
+    chmod +x MidTownApp
+    ```
+
+3. Run the executable:
+    - **Windows**:
+      ```sh
+      MidTownApp.exe
+      ```
+    - **Linux**:
+      ```sh
+      ./MidTownApp
+      ```
+
+### From Source
+To install and run the application from source:
 
 1. Clone the repository:
     ```sh
@@ -28,10 +50,16 @@ To install and run the project from source, follow these steps:
     ```
 
 2. (Optional) Create and activate a virtual environment:
-    ```sh
-    python -m venv midtown_app_venv
-    source midtown_app_venv/bin/activate  # On Windows, use `midtown_app_venv\\Scripts\\activate`
-    ```
+    - **Windows**:
+      ```sh
+      python -m venv midtown_app_venv
+      source midtown_app_venv\Scripts\activate
+      ```
+    - **Linux**:
+      ```sh
+      python3 -m venv midtown_app_venv
+      source midtown_app_venv/bin/activate
+      ```
 
 3. Install the dependencies:
     ```sh
@@ -39,28 +67,33 @@ To install and run the project from source, follow these steps:
     ```
 
 4. Run the application:
-    ```sh
-    python src/midtown_app.py
-    ```
+    - **Windows**:
+      ```sh
+      python src\midtown_app.py
+      ```
+    - **Linux**:
+      ```sh
+      python src/midtown_app.py
+      ```
 
 ## Usage
-After running the `midtown_app.py` file, you can easily switch between the following applets:
+After running the application, you can easily switch between the following applets:
 - **Rock Paper Scissors**: Play a classic game against another player.
-  
+
 <p align="center">
-  <img src="assets/screenshots/midtown-app-rps.png" alt="App Screenshot" width="600">
+  <img src="https://github.com/LukeWait/gui-app-switcher-midtown/raw/main/assets/screenshots/midtown-app-rps.png" alt="Rock Paper Scissors Screenshot" width="600">
 </p>
 
 - **Multiplication Table**: Generate and view multiplication tables.
 
 <p align="center">
-  <img src="assets/screenshots/midtown-app-multiply-table.png" alt="App Screenshot" width="600">
+  <img src="https://github.com/LukeWait/gui-app-switcher-midtown/raw/main/assets/screenshots/midtown-app-multiply-table.png" alt="Multiplication Table Screenshot" width="600">
 </p>
 
 - **Caesar Cipher**: Encrypt and decrypt text using the Caesar Cipher algorithm.
 
 <p align="center">
-  <img src="assets/screenshots/midtown-app-caesar.png" alt="App Screenshot" width="600">
+  <img src="https://github.com/LukeWait/gui-app-switcher-midtown/raw/main/assets/screenshots/midtown-app-caesar.png" alt="Caesar Cipher Screenshot" width="600">
 </p>
 
 ## License
