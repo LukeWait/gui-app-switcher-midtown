@@ -26,8 +26,8 @@ The MidTown IT Training Solutions App provides a GUI hub to switch between three
 2. Extract the contents to a desired location.
 3. Run the `MidTownApp.exe` file.
 
-#### Linux
-Due to size constraints, a Linux executable is not included in the releases. Please follow the instructions below to run the application from source.
+#### Linux/macOS
+Due to size constraints I have not included Linux/macOS executables under Releases. Please follow the instructions below to run the application from source or check the [Development](#development) section for details on building with PyInstaller.
 
 ### From Source
 To install and run the application from source:
@@ -84,6 +84,18 @@ After running the application, you can easily switch between the following apple
 <p align="center">
   <img src="https://github.com/LukeWait/midtown-app/raw/main/assets/screenshots/midtown-app-caesar.png" alt="Caesar Cipher Screenshot" width="600">
 </p>
+
+## Development
+### Building Executables with PyInstaller
+To build executables for Windows, macOS, and Linux, you can use PyInstaller. I recommend using PyInstaller version 6.1.0 as it is stable and doesn't result in the executable being flagged as a virus like some newer versions. First, ensure you have PyInstaller installed:
+```sh
+pip install pyinstaller==6.1.0
+```
+Then, run the following command to create an executable:
+```sh
+pyinstaller --onefile --add-data "assets/images:assets/images" --add-data "assets/fonts:assets/fonts" --noconsole src/midtown_app.py
+```
+This will generate the executable in the `dist` directory. It will also create a `build` directory and `.spec` file. These are used in the build process and can be safely removed.
 
 ## License
 This project is licensed under the MIT License. See the LICENSE file for details.
