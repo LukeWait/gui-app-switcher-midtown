@@ -26,8 +26,17 @@ The MidTown IT Training Solutions App provides a GUI hub to switch between three
 2. Extract the contents to a desired location.
 3. Run the `MidTownApp.exe` file.
 
-#### Linux/macOS
-Due to size constraints I have not included Linux/macOS executables under Releases. Please follow the instructions below to run the application from source or check the [Development](#development) section for details on building with PyInstaller.
+#### Linux
+1. Download the `midtown_app_linux_v2_0_1.zip` from the [releases page](https://github.com/LukeWait/midtown-app/releases).
+2. Extract the contents to a desired location.
+3. Make the MidTownApp file executable by running the following command in the terminal:
+    ```sh
+    chmod +x MidTownApp
+    ```
+4. Run the MidTownApp file by navigating to the directory in the terminal and executing:
+    ```sh
+    ./MidTownApp
+    ```
 
 ### From Source
 To install and run the application from source:
