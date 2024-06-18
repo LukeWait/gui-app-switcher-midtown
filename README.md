@@ -101,10 +101,26 @@ To build executables for Windows, macOS, and Linux, you can use PyInstaller. I r
 ```sh
 pip install pyinstaller==6.1.0
 ```
-Then, run the following command to create an executable:
+#### Windows
+Run the following command from the project main directory:
 ```sh
 pyinstaller --onefile --add-data "assets/images:assets/images" --add-data "assets/fonts:assets/fonts" --noconsole src/midtown_app.py
 ```
+#### Linux
+For Linux, you need to create a hook-PIL.py file to handle the PIL library correctly. Follow these steps:
+1. Create a file named hook-PIL.py in the main directory of your project with the following content:
+    ```sh
+    from PyInstaller.utils.hooks import copy_metadata, collect_submodules
+
+    datas = copy_metadata('Pillow')
+    hiddenimports = collect_submodules('PIL')
+    ```
+
+2. Run the following command from the project main directory:
+    ```sh
+    pyinstaller --onefile --add-data "assets/images:assets/images" --add-data "assets/fonts:assets/fonts" --additional-hooks-dir=. --noconsole src/midtown_app.py
+    ```
+
 This will generate the executable in the `dist` directory. It will also create a `build` directory and `.spec` file. These are used in the build process and can be safely removed.
 
 ## License
