@@ -14,7 +14,6 @@ Dependencies (requirements.txt):
 CTkToolTip==0.8
 customtkinter==5.2.1
 darkdetect==0.8.0
-packaging==23.2
 Pillow==10.1.0
 
 Icons: Designed by Freepik - www.freepik.com
@@ -23,13 +22,18 @@ GitHub Repository: https://github.com/LukeWait/gui-app-switcher-midtown
 """
 
 import os
-import pkg_resources
+import sys
 import customtkinter as ctk
 from tkinter import *
 from CTkToolTip import *
 from PIL import Image
 
-base_path = pkg_resources.resource_filename(__name__, "")
+def resource_path(relative_path):
+    try:
+        base_path = sys._MEIPASS
+    except AttributeError:
+        base_path = os.path.dirname(os.path.abspath(__file__))
+    return os.path.join(base_path, relative_path)
 
 
 class Gui(ctk.CTk):
@@ -95,8 +99,14 @@ class Gui(ctk.CTk):
         self.grid_columnconfigure(1, weight=1)
 
         # Define paths to various resource directories
-        self.images_path = os.path.join(base_path, "../assets/images")
-        self.fonts_path = os.path.join(base_path, "../assets/fonts")
+        if hasattr(sys, '_MEIPASS'):
+            # In a PyInstaller bundle, use paths relative to the _MEIPASS directory
+            self.images_path = resource_path(os.path.join("assets", "images"))
+            self.fonts_path = resource_path(os.path.join("assets", "fonts"))
+        else:
+            # In development, use paths relative to the script's directory
+            self.images_path = resource_path(os.path.join("..", "assets", "images"))
+            self.fonts_path = resource_path(os.path.join("..", "assets", "fonts"))
 
         # Dictionaries of solution icons, buttons, and rps images
         self.icons = {}
