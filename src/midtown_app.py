@@ -5,7 +5,7 @@ Description: Provides a gui hub to switch between three algorithmic solutions:
                 - Rock Paper Scissors
                 - Multiplication Table
                 - Caesar Cipher
-Version: 2.0.1
+Version: 2.1.0
 Author: Luke Wait
 Date: October 30, 2023
 License: MIT License
