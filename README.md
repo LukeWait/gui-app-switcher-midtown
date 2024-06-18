@@ -13,6 +13,7 @@ The MidTown IT Training Solutions App provides a GUI hub to switch between three
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
+- [Development](#development)
 - [License](#license)
 - [Acknowledgments](#acknowledgments)
 - [Source Code](#source-code)
