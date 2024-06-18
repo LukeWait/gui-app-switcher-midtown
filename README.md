@@ -125,5 +125,4 @@ For those building from source, the dependencies listed in `requirements.txt` ar
 - CTkToolTip==0.8
 - customtkinter==5.2.1
 - darkdetect==0.8.0
-- packaging==23.2
 - Pillow==10.1.0
