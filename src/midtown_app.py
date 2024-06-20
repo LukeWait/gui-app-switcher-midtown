@@ -6,7 +6,9 @@ Description: Provides a gui hub to switch between three algorithmic solutions:
                 - Multiplication Table
                 - Caesar Cipher
 Version: 2.1.0
-Author: Luke Wait
+Author: ┬  ┬ ┬┬┌─┌─┐┬ ┬┌─┐╦╔╦╗
+        │  │ │├┴┐├┤ │││├─┤║ ║
+        ┴─┘└─┘┴ ┴└─┘└┴┘┴ ┴╩ ╩
 Date: October 30, 2023
 License: MIT License
 
